@@ -8,9 +8,10 @@
 
 ## Usage
 
-###### Quick Start (koa or express)
+##### Quick Start (koa or express)
 
-    // koa
+###### Koa
+
     var knex = require('knex-pg-middleware');
     var app = require('koa')();
     app.use(knex());
@@ -19,7 +20,8 @@
       this.status = (yield this.knex('resource').where('id', this.query.id)) ? 204 : 404;
     });
 
-    // express
+###### Express
+
     var knex = require('knex-pg-middleware/express');
     var app = require('express')();
     app.use(knex());
