@@ -33,38 +33,50 @@
 
 ## Options
 
-###### Auto-initialize via environment variables (recommended)
+##### Auto-initialize via environment variables (recommended)
 
 > It is recommended that you set the parameters via environment variables and utilize a `.env` file via a library such as [envc], [dotenv], or an equivalent.
 
-    DATABASE_NAME=demo
-    DATABASE_USER=scott
-    DATABASE_PASS=tiger
-    DATABASE_HOST=127.0.0.1
-    DATABASE_PORT=3306
+###### Required
 
-    # optional
-    DATABASE_SSL=true
-    DATABASE_CHARSET=utf8
+    DATABASE_USER="scott"
+
+###### Optional
+
+    # optional (with defaults)
+    DATABASE_HOST="localhost"
+    DATABASE_PASS=""
+    DATABASE_NAME=""
+    DATABASE_SSL="" # i.e. "Amazon RDS"
+    DATABASE_CHARSET="utf8"
     DATABASE_DEBUG=true
     DATABASE_POOL_MIN=0
-    DATABASE_POOL_MAX=7
+    DATABASE_POOL_MAX=1
 
 ###### Configuration via options object
 
+###### Required
+
     var config = {
       connection: {
-        host     : '127.0.0.1', // default = localhost
-        user     : 'scott',
-        password : 'tiger',
-        database : 'demo'
+        user: "scott"
+      }
+    }
+
+###### Optional
+
+    var config = {
+      connection: {
+        host     : "localhost",
+        password : "",
+        database : ""
       },
-      debug: true, // default = false
+      debug: false,
       pool: {
-        min: 0, // default = 0
-        max: 7  // default = 1
+        min: 0,
+        max: 1
       },
-      ssl: 'Amazon RDS' // default = undefined
+      ssl: "" // i.e. "Amazon RDS"
     }
 
     app.use(knex(config));
