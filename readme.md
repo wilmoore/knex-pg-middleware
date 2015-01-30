@@ -55,7 +55,7 @@
     DATABASE_POOL_MIN=0
     DATABASE_POOL_MAX=1
 
-###### Configuration via options object
+##### Initialize via options object
 
 ###### Required
 
