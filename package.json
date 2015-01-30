@@ -1,0 +1,60 @@
+{
+  "name": "knex-pg-middleware",
+  "version": "0.0.1",
+  "description": "Augments Koa or Express with a Knex PostgreSQL connection object.",
+  "main": "lib/koa.js",
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "NODE_ENV=test mocha --harmony",
+    "develop": "rerun-script"
+  },
+  "watches": [
+    {
+      "script": "test",
+      "patterns": [
+        "*.js",
+        "lib/**/*.js",
+        "test/**/*.js"
+      ]
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wilmoore/knex-pg-middleware"
+  },
+  "files": [
+    "lib/*.js",
+    "license",
+    "package.json"
+  ],
+  "keywords": [
+    "ecosystem:koa",
+    "ecosystem:express",
+    "ecosystem:knex",
+    "dotenv",
+    "envc",
+    "knex",
+    "PostgreSQL",
+    "database",
+    "middleware",
+    "koa",
+    "express"
+  ],
+  "author": "Wil Moore III <wil.moore@wilmoore.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^0.13.0",
+    "express": "^4.11.1",
+    "hippie": "^0.3.0",
+    "koa": "^0.16.0",
+    "mocha": "^2.1.0",
+    "rerun-script": "^0.4.1"
+  },
+  "dependencies": {
+    "debug": "^2.1.1",
+    "knex": "^0.7.3",
+    "params": "^0.1.1",
+    "pg.js": "^4.1.1"
+  }
+}
