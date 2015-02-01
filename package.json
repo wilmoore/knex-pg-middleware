@@ -1,6 +1,6 @@
 {
   "name": "knex-pg-middleware",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Augments Koa or Express with a Knex PostgreSQL connection object.",
   "main": "lib/koa.js",
   "scripts": {
