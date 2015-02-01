@@ -52,6 +52,7 @@
     "rerun-script": "^0.4.1"
   },
   "dependencies": {
+    "boolean": "0.0.1",
     "debug": "^2.1.1",
     "knex": "^0.7.3",
     "params": "^0.1.1",
